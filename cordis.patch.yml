@@ -1,0 +1,20 @@
+# dshplug bundle patch: the rows this bundle contributes when it is listed in
+# a profile's dsh.profile.bundles. Applied in bundle order over an empty root;
+# later bundle patches and the user's profile cordis.patch.yml may target rows
+# by id (last write wins per row).
+- insert:
+    - id: dshplug
+      name: 'dshplug'
+      config:
+        dsh:
+          cwd: ''
+          timeoutMs: 900000
+        wechat:
+          enabled: false
+          token: ''
+          botId: ''
+          baseUrl: https://ilinkai.weixin.qq.com
+          pollTimeoutMs: 35000
+        server:
+          enabled: false
+          port: 3901
